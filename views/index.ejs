@@ -14,11 +14,9 @@
 </head>
 <body ng-app="flapperNews">
   <nav class="navbar navbar-default pull-right" ng-controller="NavCtrl">
-    <ul class="nav navbar-nav">
-      <li ng-show="isLoggedIn()"><a>{{ currentUser() }}</a></li>
-      <li ng-show="isLoggedIn()"><a href="" ng-click="logOut()">Log Out</a></li>
-      <li ng-hide="isLoggedIn()"><a href="/#/login">Log In</a></li>
-      <li ng-hide="isLoggedIn()"><a href="/#/register">Register</a></li>
+    <a href="" class="btn btn-default navbar-btn" ng-click="logOut()" ng-show="isLoggedIn()">Log Out</a>
+    <a href="/#/login" class="btn btn-default navbar-btn" ng-hide="isLoggedIn()">Login</a>
+    <a href="/#/register" class="btn btn-default navbar-btn" ng-hide="isLoggedIn()">Register</a>
     </ul>
   </nav>
   <div class="container">
